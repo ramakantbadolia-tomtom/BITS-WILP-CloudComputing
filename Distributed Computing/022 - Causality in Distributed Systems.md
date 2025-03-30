@@ -48,8 +48,8 @@ P3:      ----> F -------> G
 #### 2. **Vector Clocks**
    - **Vector clocks** are more powerful than Lamport timestamps because they track the state of each process in a vector.
    - If an event \( A \) has a vector timestamp \( V_A \) and event \( B \) has vector timestamp \( V_B \), then:
-     - \( A → B \) if \( V_A[i] \leq V_B[i] \) for all \( i \) and \( V_A[j] < V_B[j] \) for at least one \( j \).
-     - If neither \( V_A \leq V_B \) nor \( V_B \leq V_A \), then \( A \) and \( B \) are concurrent.
+     - \( A → B \) if \( V_A[i] <= V_B[i] \) for all \( i \) and \( V_A[j] < V_B[j] \) for at least one \( j \).
+     - If neither \( V_A <= V_B \) nor \( V_B <= V_A \), then \( A \) and \( B \) are concurrent.
    - Vector clocks provide both causality and concurrency detection.
 
 ### Causality in Distributed Systems: Use Cases
