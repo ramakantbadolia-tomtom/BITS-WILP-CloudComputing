@@ -35,8 +35,8 @@ There are two main rules governing Lamport clocks:
    - Local operation at process $\( P_i \): \( C_i = C_i + 1 \)$
    - Message send by $\( P_i \): \( C_i = C_i + 1 \)$
    
-2. **Message Reception**: When process $\( P_i \)$ receives a message from process $\( P_j \)$ with timestamp $\( T_j \)$, it updates its clock as:
-   - $\( C_i = \max(C_i, T_j) + 1 \)$
+2. **Message Reception**: When process $\( P_i \)$ receives a message from process $\( P_j \)$ with clock $\( C_j \)$, it updates its clock as:
+   - $\( C_i = \max(C_i, C_j) + 1 \)$
 
 #### b. **Vector Clock Update Rules**
 
